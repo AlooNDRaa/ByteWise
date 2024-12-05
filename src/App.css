@@ -265,3 +265,41 @@ li:hover ~ li p {
     transform: rotate(-15deg);
   }
 }
+
+
+
+.make-user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  color: var(--color1);
+}
+
+.input-container, .welcome-message {
+  text-align: center;
+}
+
+.name-input {
+  padding: 1.5rem;
+  font-size: 1rem;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-btn, .clear-btn {
+  padding: 1.5rem;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--buttons);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-btn:hover, .clear-btn:hover {
+  background-color: var(--button-hover);
+}
