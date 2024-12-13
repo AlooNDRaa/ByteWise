@@ -1,3 +1,6 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 * {
   padding: 0;
   margin: 0;
@@ -76,6 +79,11 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
+  align-items: center;
+}
+
+ul button:hover {
+  background-color: var(--contrast);
 }
 
 nav li {
@@ -94,6 +102,19 @@ nav li {
   justify-content: center;
 }
 
+
+.dropdown-menu {
+  background-color: var(--background2);
+  height: auto;
+  width: min-content;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-drop {
+  color: var(--background);
+}
 
 .option-card {
   display: flex;
@@ -225,11 +246,13 @@ nav li {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
   height: 4rem;
 }
 
 .div-footer {
   display: flex;
+  background-color: white;
 }
 
 .ul-footer {
@@ -302,4 +325,125 @@ li:hover ~ li p {
 
 .save-btn:hover, .clear-btn:hover {
   background-color: var(--button-hover);
+}
+
+
+/* BOARDS */
+
+.tareas-habitos-board {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.tareas-lista {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tarea-item {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tarea-item.completada span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.tarea-actions button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tarea-actions button:hover {
+  background-color: #0056b3;
+}
+
+.agregar-tarea form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.agregar-tarea input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.agregar-tarea button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.agregar-tarea button:hover {
+  background-color: #218838;
+}
+
+.tipo-tarea {
+  margin-bottom: 20px;
+}
+
+.tipo-tarea select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.tareas-lista, .habitos-lista {
+  margin-bottom: 20px;
+}
+
+.tarea-item {
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tarea-item.completada {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* MODO OSCURO */
+
+.dark-mode body{
+  background-color: black;
+}
+
+.dark-mode .div-footer {
+  background-color: #aecad1 !important;
 }

@@ -10,6 +10,7 @@ import Navbar from "./assets/components/generals/header";
 import Footer from "./assets/components/generals/footer";
 import "./App.css";
 
+
 function App() {
   const [userName, setUserName] = useState(""); 
 
@@ -29,11 +30,11 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<MakeUser setUserName={setUserName} />} // Pasar setter al componente
+          element={<MakeUser setUserName={setUserName} />} 
         />
         <Route
           path="/home"
-          element={<HomeScreen user={{ name: userName }} />} // Pasar el nombre como prop
+          element={<HomeScreen user={{ name: userName }} />} 
         />
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/dashboard" element={<HomeS />} />

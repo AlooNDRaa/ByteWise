@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 
 function MetasPresupuestos() {
-    // Estado con metas de ejemplo
     const [metas, setMetas] = useState([
         { id: 1, nombre: 'Ahorro para vacaciones', monto: 2000, completado: false },
         { id: 2, nombre: 'Pago de tarjeta de crédito', monto: 500, completado: true }
     ]);
 
-    // Funciones para editar, agregar y eliminar metas
     const agregarMeta = () => {
         const nuevaMeta = { id: metas.length + 1, nombre: 'Nueva Meta', monto: 0, completado: false };
         setMetas([...metas, nuevaMeta]);

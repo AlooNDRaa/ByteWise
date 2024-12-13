@@ -31,7 +31,7 @@ const MakeUser = ({ setUserName }) => {
           className="name-input"
         />
         <button className="save-btn" onClick={handleSaveName}>
-          Continuar
+          Inicie
         </button>
       </div>
     </div>

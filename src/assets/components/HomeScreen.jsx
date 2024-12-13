@@ -5,7 +5,7 @@ function HomeScreen({ user }) {
   return (
     <div className="container">
       <div className="home-container">
-        <h1>Bienvenido, {user.name || "Usuario"}, a ByteWise</h1>
+        <h1>Bienvenid@, {user.name || "Usuario"}, a ByteWise</h1>
         <p>¿Qué te gustaría hacer hoy?</p>
 
         <div className="home-options">
