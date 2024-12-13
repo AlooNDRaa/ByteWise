@@ -5,7 +5,7 @@ import DropdownMenu from "../functions/DropdorwnMenu";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="nav-home">
       <header>
         <a href="/home" className="headerLink">
         <img src={logo} alt="Logo" className="logo" />

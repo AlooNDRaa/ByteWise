@@ -70,7 +70,7 @@ function DropdownMenu() {
   };
 
   return (
-    <Dropdown autoClose="outside">  
+    <Dropdown>  
       <Dropdown.Toggle variant="success" id="dropdown-basic">
         <IoAccessibility size={15} />
       </Dropdown.Toggle>
@@ -80,7 +80,7 @@ function DropdownMenu() {
           {isDarkmode ? "Modo claro" : "Modo oscuro"}
         </Dropdown.Item>
         <Dropdown.Item className="menu-drop" onClick={toggleDislexia}>
-          {isDislexiaMode ? "Dislexia activada" : "Dislexia desactivada"}
+          {isDislexiaMode ? "Dislexia desactivar" : "Dislexia activar"}
         </Dropdown.Item>
         {daltonimsMode.map((mode) => (
           <Dropdown.Item className="menu-drop" key={mode} onClick={() => toggleDaltonimsMode(mode)}>

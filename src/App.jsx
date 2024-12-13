@@ -34,7 +34,7 @@ function App() {
         />
         <Route
           path="/home"
-          element={<HomeScreen user={{ name: userName }} />} 
+          element={ <HomeScreen user={{ name: userName }} />} 
         />
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/dashboard" element={<HomeS />} />

@@ -1,4 +1,5 @@
 import React from "react";
+import cards from "../json/Cards.Home.json"
 import { Link } from "react-router-dom";
 
 function HomeScreen({ user }) {
@@ -6,32 +7,18 @@ function HomeScreen({ user }) {
     <div className="container">
       <div className="home-container">
         <h1>Bienvenid@, {user.name || "Usuario"}, a ByteWise</h1>
-        <p>¿Qué te gustaría hacer hoy?</p>
 
         <div className="home-options">
-          <div className="option-card">
-            <h3>Dashboard</h3>
-            <p>Visualiza un resumen de tu situación financiera.</p>
-            <Link to="/dashboard" className="btn btn-primary">
-              Ir al Dashboard
+          {
+            cards.map((cards, index) => (
+          <div className="option-card" key={index}>
+            <h3>{cards.title}</h3>
+            <p>{cards.description}</p>
+            <Link to={cards.link} className="btn btn-primary">
+              {cards.buttonText}
             </Link>
           </div>
-
-          <div className="option-card">
-            <h3>Gestión de Transacciones</h3>
-            <p>Administra tus ingresos y gastos.</p>
-            <Link to="/transactions" className="btn btn-primary">
-              Gestionar Transacciones
-            </Link>
-          </div>
-
-          <div className="option-card">
-            <h3>Gestión de Tareas y Hábitos</h3>
-            <p>Organiza tus tareas y hábitos financieros.</p>
-            <Link to="/tareasYhabitos" className="btn btn-primary">
-              Gestionar Tareas y Hábitos
-            </Link>
-          </div>
+            ))}
         </div>
       </div>
     </div>
